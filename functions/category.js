@@ -49,8 +49,11 @@ function errorResponse({message, code}){
 
 async function category(query){
  
+ 
    const url = 'functions/db/todos.json'
   const filePath = path.resolve(path.dirname('./'),url);
+ 
+ 
      try {
         let  toDoFile = await fs.readFile(filePath, 'utf-8')
         const todos = JSON.parse(toDoFile)
